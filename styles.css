@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', sans-serif;
+}
+
+:root {
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan1: hsl(186, 14%, 43%);
+    --darkGrayishCyan2: hsl(184, 14%, 56%);
+    --lightGrayishCyan1: hsl(185, 41%, 84%);
+    --lightGrayishCyan2: hsl(189, 41%, 97%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Space Mono', sans-serif;
+    background-color: var(--lightGrayishCyan1);
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#tip-number, #total-number {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.right h1 {
+    color: white;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    box-shadow: 0 30px 30px -10px rgb(182, 177, 177);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    padding: 15px;
+}
+
+.left h1 {
+    color: var(--darkGrayishCyan1);
+}
+
+
+.bill input {
+    margin-bottom: 55px;
+    width: 300px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: var(--lightGrayishCyan2);
+    border: none;
+    margin-top: 10px;
+    color: var(--veryDarkCyan);
+    border-radius: 5px;
+    text-align: right;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 50px);
+}
+
+.buttons button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: var(--veryDarkCyan);
+    color: white;
+    font-weight: 700;
+    font-size:medium;
+    cursor: pointer;
+}
+
+
+.buttons input {
+    text-align: center;
+    height: 40px;
+    border: none;
+    background-color: var(--lightGrayishCyan2);
+    width: 90px;
+    border-radius: 5px;
+    color: var(--darkGrayishCyan1);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.number-people input {
+    width: 300px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: var(--lightGrayishCyan2);
+    border: none;
+    color: var(--veryDarkCyan);
+    border-radius: 5px;
+    text-align: right;
+}
+
+input[type=number] {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]:focus {
+    outline: none;
+    border: 2px solid var(--strongCyan);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--veryDarkCyan);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.result {
+    padding: 30px 20px;
+    margin-bottom: 90px;
+}
+
+p {
+    color: var(--darkGrayishCyan2);
+    font-size: 14px;
+}
+
+.tip-amount {
+    margin-bottom: 40px;
+    display: flex;
+    margin-top: 8px;
+    font-family: 'Space Mono', sans-serif;
+}
+
+#dollar {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 17px;
+}
+
+#person {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 17px;
+}
+
+.total {
+    display: flex;
+    font-family: 'Space Mono', sans-serif;
+}
+
+#total-number, #tip-number {
+    color: var(--strongCyan);
+}
+
+#total-number {
+    margin-left: 120px;
+}
+
+#tip-number {
+    margin-left: 90px;
+}
+
+.reset {
+    background-color: var(--strongCyan);
+    font-weight: 700;
+    padding: 10px 140px;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    color: var(--veryDarkCyan);
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: hsl(172, 75%, 81%);
+}
+
+.warning {
+    border: 2px solid red;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        flex-direction: column;
+    }
+}
